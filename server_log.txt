@@ -1,0 +1,863 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[15:28:38] 
+[15:28:38] Server Plugins
+[15:28:38] --------------
+[15:28:38]  Loaded 0 plugins.
+
+[15:28:38] 
+[15:28:38] Filterscripts
+[15:28:38] ---------------
+[15:28:38]   Loading filterscript 'CC-GR.amx'...
+[15:28:38]   Loading filterscript 'Hospital.amx'...
+[15:28:38] 
+--------------------------------------
+[15:28:38]          Hospital Interior by PawNFoX
+[15:28:38] --------------------------------------
+
+[15:28:38]   Loading filterscript 'Bank.amx'...
+[15:28:38]   Loading filterscript 'anims.amx'...
+[15:28:38]   Loading filterscript 'real_lights.amx'...
+[15:28:38] 
+--------------------------------------
+[15:28:38]  Infinite-Gaming.com Presents:
+[15:28:38]  Real Vehicle Lights v2 by Cyber_Punk
+[15:28:38] --------------------------------------
+
+[15:28:38]   Loading filterscript 'npc_record.amx'...
+[15:28:38]   Loading filterscript 'pizza.amx'...
+[15:28:38]   Loading filterscript 'attachments.amx'...
+[15:28:38]   Loading filterscript 'Vendetta_House_System.amx'...
+[15:28:38] 
+--------------------------------------
+[15:28:38]  House System By Tote_Vendetta
+[15:28:38] --------------------------------------
+
+[15:28:38]   Loading filterscript 'Vendettas_Job_System.amx'...
+[15:28:38] 
+--------------------------------------
+[15:28:38]  Vendetta's Job System by Tote_Vendetta 
+[15:28:38] --------------------------------------
+
+[15:28:38]   Loading filterscript 'CamEditor.amx'...
+[15:28:38] 
+--------------------------------------
+[15:28:38]  CamEditor by Drebin
+[15:28:38] --------------------------------------
+
+[15:28:38]   Loading filterscript 'destroy.amx'...
+[15:28:38] (SA-MP 0.3d)
+[15:28:38]   Loading filterscript 'F_Streamer.amx'...
+[15:28:38] F_Streamer Loaded successful.
+[15:28:38]   Loaded 13 filterscripts.
+
+[15:28:38] Incoming connection: 127.0.0.1:60377
+[15:28:38] Incoming connection: 127.0.0.1:60378
+[15:28:38] Incoming connection: 127.0.0.1:60379
+[15:28:38] Incoming connection: 127.0.0.1:60380
+[15:28:38] Incoming connection: 127.0.0.1:60381
+[15:28:38] Incoming connection: 127.0.0.1:60382
+[15:28:38] Incoming connection: 127.0.0.1:60384
+[15:28:38] Incoming connection: 127.0.0.1:60383
+[15:28:38] Incoming connection: 127.0.0.1:60385
+[15:28:38] Incoming connection: 127.0.0.1:60386
+[15:28:38] Incoming connection: 127.0.0.1:60387
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:38] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Cargando coches en propiedad 
+[15:28:39] -------------------------
+[15:28:39] 
+***** COCHES EN PROPIEDAD CARGADOS ******
+
+
+[15:28:39] Cargando bandas 
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] -------------------------
+[15:28:39] 
+***** 0 BANDAS CARGADAS ******
+
+
+[15:28:39] Cargando coches bandas 
+[15:28:39] -------------------------
+[15:28:39] 
+***** COCHES DE BANDAS CARGADOS ******
+
+
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39]  Vendetta's Revenge
+[15:28:39] _____________________
+[15:28:39]  By Los Vendetta
+[15:28:39]  
+[15:28:39] Number of vehicle models: 31
+[15:28:39] [npc:join] vendetta_drogacocheNPC has joined the server (0:127.0.0.1)
+[15:28:39] [npc:join] muelle_andaNPC has joined the server (1:127.0.0.1)
+[15:28:39] [npc:join] muelle_fumaNPC has joined the server (2:127.0.0.1)
+[15:28:39] [npc:join] muelle_armado1NPC has joined the server (3:127.0.0.1)
+[15:28:39] [npc:join] muelle_armado2NPC has joined the server (4:127.0.0.1)
+[15:28:39] [npc:join] muelle_armado3NPC has joined the server (5:127.0.0.1)
+[15:28:39] [npc:join] muelle_pizarraNPC has joined the server (6:127.0.0.1)
+[15:28:39] [npc:join] muelle_armado4NPC has joined the server (7:127.0.0.1)
+[15:28:39] [npc:join] lider_mecanicoNPC has joined the server (8:127.0.0.1)
+[15:28:39] [npc:join] mecanico1NPC has joined the server (9:127.0.0.1)
+[15:28:39] [npc:join] mecanico2NPC has joined the server (10:127.0.0.1)
+[15:28:39] Incoming connection: 127.0.0.1:60435
+[15:28:39] Incoming connection: 127.0.0.1:60436
+[15:28:39] Incoming connection: 127.0.0.1:60437
+[15:28:39] [npc:join] vendetta_armas1NPC has joined the server (11:127.0.0.1)
+[15:28:39] [npc:join] vendetta_armas2NPC has joined the server (12:127.0.0.1)
+[15:28:39] [npc:join] vendetta_armas3NPC has joined the server (13:127.0.0.1)
+[15:28:39] Incoming connection: 127.0.0.1:60388
+[15:28:39] Incoming connection: 127.0.0.1:60389
+[15:28:39] Incoming connection: 127.0.0.1:60390
+[15:28:39] Incoming connection: 127.0.0.1:60391
+[15:28:39] Incoming connection: 127.0.0.1:60392
+[15:28:39] Incoming connection: 127.0.0.1:60393
+[15:28:39] Incoming connection: 127.0.0.1:60394
+[15:28:39] Incoming connection: 127.0.0.1:60395
+[15:28:39] Incoming connection: 127.0.0.1:60396
+[15:28:39] Incoming connection: 127.0.0.1:60397
+[15:28:39] Incoming connection: 127.0.0.1:60398
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:39] [npc:join] entierro_dosNPC has joined the server (15:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60417
+[15:28:40] [npc:join] entierro_unoNPC has joined the server (14:127.0.0.1)
+[15:28:40] [npc:join] entierro_tresNPC has joined the server (16:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60419
+[15:28:40] Incoming connection: 127.0.0.1:60418
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] [npc:join] entierro_cuatroNPC has joined the server (17:127.0.0.1)
+[15:28:40] [npc:join] entierro_cincoNPC has joined the server (18:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60421
+[15:28:40] Incoming connection: 127.0.0.1:60422
+[15:28:40] [npc:join] entierro_seisNPC has joined the server (19:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60423
+[15:28:40] [npc:join] entierro_sieteNPC has joined the server (20:127.0.0.1)
+[15:28:40] [npc:join] entierro_mafiosoNPC has joined the server (21:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60424
+[15:28:40] Incoming connection: 127.0.0.1:60425
+[15:28:40] [npc:join] entierro_mafioso1NPC has joined the server (22:127.0.0.1)
+[15:28:40] [npc:join] entierro_curaNPC has joined the server (23:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60426
+[15:28:40] [npc:join] entierro_protaNPC has joined the server (24:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60427
+[15:28:40] Incoming connection: 127.0.0.1:60428
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] [npc:join] policia_control3NPC has joined the server (25:127.0.0.1)
+[15:28:40] [npc:join] policia_control5NPC has joined the server (26:127.0.0.1)
+[15:28:40] [npc:join] policia_control4NPC has joined the server (27:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga1NPC has joined the server (28:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga2NPC has joined the server (29:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga3NPC has joined the server (30:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga4NPC has joined the server (31:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga5bossNPC has joined the server (32:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga6NPC has joined the server (33:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga7NPC has joined the server (34:127.0.0.1)
+[15:28:40] [npc:join] vendetta_droga8NPC has joined the server (35:127.0.0.1)
+[15:28:40] Incoming connection: 127.0.0.1:60399
+[15:28:40] Incoming connection: 127.0.0.1:60400
+[15:28:40] Incoming connection: 127.0.0.1:60401
+[15:28:40] Incoming connection: 127.0.0.1:60402
+[15:28:40] Incoming connection: 127.0.0.1:60403
+[15:28:40] Incoming connection: 127.0.0.1:60404
+[15:28:40] Incoming connection: 127.0.0.1:60405
+[15:28:40] Incoming connection: 127.0.0.1:60406
+[15:28:40] Incoming connection: 127.0.0.1:60407
+[15:28:40] Incoming connection: 127.0.0.1:60408
+[15:28:40] Incoming connection: 127.0.0.1:60409
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:40] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:41] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[15:28:41] [npc:join] create_bandaNPC has joined the server (36:127.0.0.1)
+[15:28:41] [npc:join] create_banda1NPC has joined the server (37:127.0.0.1)
+[15:28:41] Incoming connection: 127.0.0.1:60429
+[15:28:41] [npc:join] create_bandabossNPC has joined the server (38:127.0.0.1)
+[15:28:41] Incoming connection: 127.0.0.1:60430
+[15:28:41] [npc:join] bomberoNPC has joined the server (39:127.0.0.1)
+[15:28:41] [npc:join] bombero_bossNPC has joined the server (40:127.0.0.1)
+[15:28:41] [npc:join] tirao1NPC has joined the server (41:127.0.0.1)
+[15:28:41] Incoming connection: 127.0.0.1:60432
+[15:28:41] Incoming connection: 127.0.0.1:60431
+[15:28:41] [npc:join] banquero1NPC has joined the server (43:127.0.0.1)
+[15:28:41] Incoming connection: 127.0.0.1:60433
+[15:28:41] Incoming connection: 127.0.0.1:60434
+[15:28:41] [npc:join] banqueroNPC has joined the server (42:127.0.0.1)
+[15:28:41] [npc:join] banquero2NPC has joined the server (44:127.0.0.1)
+[15:28:41] [npc:join] poli_1NPC has joined the server (45:127.0.0.1)
+[15:28:41] [npc:join] poli_2NPC has joined the server (46:127.0.0.1)
+[15:28:41] [npc:join] vendetta_droga9bossNPC has joined the server (47:127.0.0.1)
+[15:28:41] [npc:join] vendetta_drogagirlNPC has joined the server (49:127.0.0.1)
+[15:28:41] [npc:join] vendetta_droga10NPC has joined the server (48:127.0.0.1)
+[15:28:41] [npc:join] vendetta_droga11bossNPC has joined the server (50:127.0.0.1)
+[15:28:41] [npc:join] vendetta_drogagirl1NPC has joined the server (51:127.0.0.1)
+[15:28:41] [npc:join] vendetta_armasNPC has joined the server (52:127.0.0.1)
+[15:28:41] Incoming connection: 127.0.0.1:60410
+[15:28:41] Incoming connection: 127.0.0.1:60412
+[15:28:41] Incoming connection: 127.0.0.1:60411
+[15:28:41] Incoming connection: 127.0.0.1:60413
+[15:28:41] Incoming connection: 127.0.0.1:60414
+[15:28:41] Incoming connection: 127.0.0.1:60415
+[15:28:42] Incoming connection: 127.0.0.1:60416
+[15:28:42] Incoming connection: 127.0.0.1:60420
+[15:28:42] [npc:join] poli_3NPC has joined the server (53:127.0.0.1)
+[15:28:42] [npc:join] poli_5NPC has joined the server (54:127.0.0.1)
+[15:28:42] [npc:join] poli_4NPC has joined the server (55:127.0.0.1)
+[15:28:42] [npc:join] poli_6NPC has joined the server (56:127.0.0.1)
+[15:28:42] [npc:join] policia_controlNPC has joined the server (57:127.0.0.1)
+[15:28:42] [npc:join] policia_control1NPC has joined the server (58:127.0.0.1)
+[15:28:42] [npc:join] policia_control2NPC has joined the server (59:127.0.0.1)
+[15:28:42] [npc:join] vendetta_drogaNPC has joined the server (60:127.0.0.1)
+[15:29:40] Incoming connection: 127.0.0.1:52206
+[15:29:41] [join] tote has joined the server (61:127.0.0.1)
+[15:30:05] tote has logged in
+[15:30:15] Incoming connection: 79.159.162.128:51777
+[15:30:16] [join] Pataki has joined the server (62:79.159.162.128)
+[15:30:46] Pataki has logged in
+[15:31:44] [part] tote has left the server (61:1)
+[15:32:12] Incoming connection: 127.0.0.1:54457
+[15:32:13] [join] tote has joined the server (61:127.0.0.1)
+[15:32:23] tote has logged in
+[15:34:44] [part] tote has left the server (61:1)
+[15:38:12] Incoming connection: 127.0.0.1:58733
+[15:38:13] [join] tote has joined the server (61:127.0.0.1)
+[15:38:22] tote has logged in
+[15:44:58] [death] tote died 54
+[15:46:09] [part] tote has left the server (61:1)
+[15:46:52] [part] Pataki has left the server (62:1)
+[15:48:52] Incoming connection: 127.0.0.1:52790
+[15:48:52] [join] tote has joined the server (61:127.0.0.1)
+[15:49:02] tote has logged in
+[15:50:47] [part] tote has left the server (61:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[18:24:48] 
+[18:24:48] Server Plugins
+[18:24:48] --------------
+[18:24:48]  Loaded 0 plugins.
+
+[18:24:48] 
+[18:24:48] Filterscripts
+[18:24:48] ---------------
+[18:24:48]   Loading filterscript 'CC-GR.amx'...
+[18:24:48]   Loading filterscript 'Hospital.amx'...
+[18:24:48] 
+--------------------------------------
+[18:24:48]          Hospital Interior by PawNFoX
+[18:24:48] --------------------------------------
+
+[18:24:48]   Loading filterscript 'Bank.amx'...
+[18:24:48]   Loading filterscript 'anims.amx'...
+[18:24:48]   Loading filterscript 'real_lights.amx'...
+[18:24:48] 
+--------------------------------------
+[18:24:48]  Infinite-Gaming.com Presents:
+[18:24:48]  Real Vehicle Lights v2 by Cyber_Punk
+[18:24:48] --------------------------------------
+
+[18:24:48]   Loading filterscript 'npc_record.amx'...
+[18:24:48]   Loading filterscript 'pizza.amx'...
+[18:24:48]   Loading filterscript 'attachments.amx'...
+[18:24:48]   Loading filterscript 'Vendetta_House_System.amx'...
+[18:24:48] 
+--------------------------------------
+[18:24:48]  House System By Tote_Vendetta
+[18:24:48] --------------------------------------
+
+[18:24:48]   Loading filterscript 'Vendettas_Job_System.amx'...
+[18:24:48] 
+--------------------------------------
+[18:24:48]  Vendetta's Job System by Tote_Vendetta 
+[18:24:48] --------------------------------------
+
+[18:24:48]   Loading filterscript 'CamEditor.amx'...
+[18:24:48] 
+--------------------------------------
+[18:24:48]  CamEditor by Drebin
+[18:24:48] --------------------------------------
+
+[18:24:48]   Loading filterscript 'destroy.amx'...
+[18:24:48] (SA-MP 0.3d)
+[18:24:48]   Loading filterscript 'F_Streamer.amx'...
+[18:24:48] F_Streamer Loaded successful.
+[18:24:48]   Loaded 13 filterscripts.
+
+[18:24:48] Incoming connection: 127.0.0.1:52307
+[18:24:48] Incoming connection: 127.0.0.1:52308
+[18:24:48] Incoming connection: 127.0.0.1:52309
+[18:24:48] Incoming connection: 127.0.0.1:52310
+[18:24:48] Incoming connection: 127.0.0.1:52311
+[18:24:48] Incoming connection: 127.0.0.1:52312
+[18:24:48] Incoming connection: 127.0.0.1:52313
+[18:24:48] Incoming connection: 127.0.0.1:52314
+[18:24:48] Incoming connection: 127.0.0.1:52315
+[18:24:48] Incoming connection: 127.0.0.1:52316
+[18:24:48] Incoming connection: 127.0.0.1:52317
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:48] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Cargando coches en propiedad 
+[18:24:49] -------------------------
+[18:24:49] 
+***** COCHES EN PROPIEDAD CARGADOS ******
+
+
+[18:24:49] Cargando bandas 
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] -------------------------
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] 
+***** 0 BANDAS CARGADAS ******
+
+
+[18:24:49] Cargando coches bandas 
+[18:24:49] -------------------------
+[18:24:49] 
+***** COCHES DE BANDAS CARGADOS ******
+
+
+[18:24:49]  Vendetta's Revenge
+[18:24:49] _____________________
+[18:24:49]  By Los Vendetta
+[18:24:49]  
+[18:24:49] Number of vehicle models: 31
+[18:24:49] [npc:join] vendetta_drogacocheNPC has joined the server (0:127.0.0.1)
+[18:24:49] [npc:join] muelle_fumaNPC has joined the server (2:127.0.0.1)
+[18:24:49] [npc:join] muelle_andaNPC has joined the server (1:127.0.0.1)
+[18:24:49] [npc:join] muelle_armado1NPC has joined the server (3:127.0.0.1)
+[18:24:49] [npc:join] muelle_armado2NPC has joined the server (4:127.0.0.1)
+[18:24:49] [npc:join] muelle_pizarraNPC has joined the server (7:127.0.0.1)
+[18:24:49] [npc:join] muelle_armado3NPC has joined the server (5:127.0.0.1)
+[18:24:49] [npc:join] muelle_armado4NPC has joined the server (6:127.0.0.1)
+[18:24:49] [npc:join] lider_mecanicoNPC has joined the server (8:127.0.0.1)
+[18:24:49] [npc:join] mecanico1NPC has joined the server (9:127.0.0.1)
+[18:24:49] [npc:join] mecanico2NPC has joined the server (10:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52365
+[18:24:49] Incoming connection: 127.0.0.1:52366
+[18:24:49] Incoming connection: 127.0.0.1:52367
+[18:24:49] [npc:join] vendetta_armas1NPC has joined the server (11:127.0.0.1)
+[18:24:49] [npc:join] vendetta_armas2NPC has joined the server (12:127.0.0.1)
+[18:24:49] [npc:join] vendetta_armas3NPC has joined the server (13:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52318
+[18:24:49] Incoming connection: 127.0.0.1:52319
+[18:24:49] Incoming connection: 127.0.0.1:52320
+[18:24:49] Incoming connection: 127.0.0.1:52321
+[18:24:49] Incoming connection: 127.0.0.1:52322
+[18:24:49] Incoming connection: 127.0.0.1:52323
+[18:24:49] Incoming connection: 127.0.0.1:52324
+[18:24:49] Incoming connection: 127.0.0.1:52325
+[18:24:49] Incoming connection: 127.0.0.1:52326
+[18:24:49] Incoming connection: 127.0.0.1:52327
+[18:24:49] Incoming connection: 127.0.0.1:52328
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] [npc:join] entierro_unoNPC has joined the server (14:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52339
+[18:24:49] [npc:join] entierro_dosNPC has joined the server (15:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52340
+[18:24:49] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:49] [npc:join] entierro_tresNPC has joined the server (16:127.0.0.1)
+[18:24:49] [npc:join] entierro_cuatroNPC has joined the server (17:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52343
+[18:24:49] Incoming connection: 127.0.0.1:52342
+[18:24:49] [npc:join] entierro_cincoNPC has joined the server (18:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52344
+[18:24:49] [npc:join] entierro_seisNPC has joined the server (19:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52345
+[18:24:49] [npc:join] entierro_mafiosoNPC has joined the server (21:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52346
+[18:24:49] [npc:join] entierro_sieteNPC has joined the server (20:127.0.0.1)
+[18:24:49] [npc:join] entierro_mafioso1NPC has joined the server (22:127.0.0.1)
+[18:24:49] Incoming connection: 127.0.0.1:52348
+[18:24:49] Incoming connection: 127.0.0.1:52347
+[18:24:49] [npc:join] entierro_curaNPC has joined the server (23:127.0.0.1)
+[18:24:50] [npc:join] entierro_protaNPC has joined the server (24:127.0.0.1)
+[18:24:50] Incoming connection: 127.0.0.1:52349
+[18:24:50] Incoming connection: 127.0.0.1:52350
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] [npc:join] poli_2NPC has joined the server (25:127.0.0.1)
+[18:24:50] [npc:join] poli_3NPC has joined the server (26:127.0.0.1)
+[18:24:50] Incoming connection: 127.0.0.1:52359
+[18:24:50] Incoming connection: 127.0.0.1:52360
+[18:24:50] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:24:50] [npc:join] poli_6NPC has joined the server (27:127.0.0.1)
+[18:24:50] [npc:join] poli_5NPC has joined the server (28:127.0.0.1)
+[18:24:50] Incoming connection: 127.0.0.1:52362
+[18:24:50] [npc:join] policia_controlNPC has joined the server (29:127.0.0.1)
+[18:24:50] Incoming connection: 127.0.0.1:52363
+[18:24:50] [npc:join] policia_control1NPC has joined the server (30:127.0.0.1)
+[18:24:50] Incoming connection: 127.0.0.1:52364
+[18:24:50] [npc:join] policia_control2NPC has joined the server (31:127.0.0.1)
+[18:24:50] [npc:join] policia_control4NPC has joined the server (32:127.0.0.1)
+[18:24:50] [npc:join] policia_control3NPC has joined the server (33:127.0.0.1)
+[18:24:50] [npc:join] vendetta_drogaNPC has joined the server (35:127.0.0.1)
+[18:24:50] [npc:join] policia_control5NPC has joined the server (34:127.0.0.1)
+[18:24:50] [npc:join] vendetta_droga9bossNPC has joined the server (36:127.0.0.1)
+[18:24:50] [npc:join] vendetta_droga10NPC has joined the server (37:127.0.0.1)
+[18:24:50] [npc:join] vendetta_drogagirlNPC has joined the server (38:127.0.0.1)
+[18:24:50] [npc:join] vendetta_drogagirl1NPC has joined the server (39:127.0.0.1)
+[18:24:50] [npc:join] vendetta_armasNPC has joined the server (40:127.0.0.1)
+[18:24:50] Incoming connection: 127.0.0.1:52329
+[18:24:50] Incoming connection: 127.0.0.1:52330
+[18:24:50] Incoming connection: 127.0.0.1:52331
+[18:24:50] Incoming connection: 127.0.0.1:52334
+[18:24:50] Incoming connection: 127.0.0.1:52333
+[18:24:50] Incoming connection: 127.0.0.1:52332
+[18:24:50] Incoming connection: 127.0.0.1:52335
+[18:24:50] Incoming connection: 127.0.0.1:52336
+[18:24:50] Incoming connection: 127.0.0.1:52337
+[18:24:50] Incoming connection: 127.0.0.1:52338
+[18:24:50] Incoming connection: 127.0.0.1:52341
+[18:24:51] [npc:join] create_bandaNPC has joined the server (41:127.0.0.1)
+[18:24:51] [npc:join] create_banda1NPC has joined the server (42:127.0.0.1)
+[18:24:51] [npc:join] create_bandabossNPC has joined the server (43:127.0.0.1)
+[18:24:51] [npc:join] tirao1NPC has joined the server (44:127.0.0.1)
+[18:24:51] Incoming connection: 127.0.0.1:52351
+[18:24:51] Incoming connection: 127.0.0.1:52352
+[18:24:51] Incoming connection: 127.0.0.1:52353
+[18:24:51] [npc:join] bombero_bossNPC has joined the server (45:127.0.0.1)
+[18:24:51] Incoming connection: 127.0.0.1:52354
+[18:24:51] [npc:join] bomberoNPC has joined the server (46:127.0.0.1)
+[18:24:51] [npc:join] banquero1NPC has joined the server (48:127.0.0.1)
+[18:24:51] [npc:join] banqueroNPC has joined the server (47:127.0.0.1)
+[18:24:51] Incoming connection: 127.0.0.1:52355
+[18:24:51] Incoming connection: 127.0.0.1:52356
+[18:24:51] [npc:join] poli_1NPC has joined the server (50:127.0.0.1)
+[18:24:51] Incoming connection: 127.0.0.1:52357
+[18:24:51] [npc:join] banquero2NPC has joined the server (49:127.0.0.1)
+[18:24:51] Incoming connection: 127.0.0.1:52358
+[18:24:51] [npc:join] poli_4NPC has joined the server (51:127.0.0.1)
+[18:24:51] Incoming connection: 127.0.0.1:52361
+[18:24:51] [npc:join] vendetta_droga1NPC has joined the server (52:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga2NPC has joined the server (53:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga3NPC has joined the server (54:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga4NPC has joined the server (55:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga6NPC has joined the server (57:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga5bossNPC has joined the server (56:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga7NPC has joined the server (58:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga8NPC has joined the server (59:127.0.0.1)
+[18:24:51] [npc:join] vendetta_droga11bossNPC has joined the server (60:127.0.0.1)
+[18:26:22] Incoming connection: 127.0.0.1:52429
+[18:26:22] [join] tote has joined the server (61:127.0.0.1)
+[18:26:32] tote has logged in
+[18:26:54] [part] tote has left the server (61:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3z, (C)2005-2014 SA-MP Team
+
+[18:27:20] 
+[18:27:20] Server Plugins
+[18:27:20] --------------
+[18:27:20]  Loaded 0 plugins.
+
+[18:27:20] 
+[18:27:20] Filterscripts
+[18:27:20] ---------------
+[18:27:20]   Loading filterscript 'CC-GR.amx'...
+[18:27:20]   Loading filterscript 'Hospital.amx'...
+[18:27:20] 
+--------------------------------------
+[18:27:20]          Hospital Interior by PawNFoX
+[18:27:20] --------------------------------------
+
+[18:27:20]   Loading filterscript 'Bank.amx'...
+[18:27:20]   Loading filterscript 'anims.amx'...
+[18:27:20]   Loading filterscript 'real_lights.amx'...
+[18:27:20] 
+--------------------------------------
+[18:27:20]  Infinite-Gaming.com Presents:
+[18:27:20]  Real Vehicle Lights v2 by Cyber_Punk
+[18:27:20] --------------------------------------
+
+[18:27:20]   Loading filterscript 'npc_record.amx'...
+[18:27:20]   Loading filterscript 'pizza.amx'...
+[18:27:20]   Loading filterscript 'attachments.amx'...
+[18:27:20]   Loading filterscript 'Vendetta_House_System.amx'...
+[18:27:20] 
+--------------------------------------
+[18:27:20]  House System By Tote_Vendetta
+[18:27:20] --------------------------------------
+
+[18:27:20]   Loading filterscript 'Vendettas_Job_System.amx'...
+[18:27:20] 
+--------------------------------------
+[18:27:20]  Vendetta's Job System by Tote_Vendetta 
+[18:27:20] --------------------------------------
+
+[18:27:20]   Loading filterscript 'CamEditor.amx'...
+[18:27:20] 
+--------------------------------------
+[18:27:20]  CamEditor by Drebin
+[18:27:20] --------------------------------------
+
+[18:27:20]   Loading filterscript 'destroy.amx'...
+[18:27:20] (SA-MP 0.3d)
+[18:27:20]   Loading filterscript 'F_Streamer.amx'...
+[18:27:20] F_Streamer Loaded successful.
+[18:27:20]   Loaded 13 filterscripts.
+
+[18:27:20] Incoming connection: 127.0.0.1:59513
+[18:27:20] Incoming connection: 127.0.0.1:59514
+[18:27:20] Incoming connection: 127.0.0.1:59515
+[18:27:20] Incoming connection: 127.0.0.1:59516
+[18:27:20] Incoming connection: 127.0.0.1:59517
+[18:27:20] Incoming connection: 127.0.0.1:59518
+[18:27:20] Incoming connection: 127.0.0.1:59519
+[18:27:20] Incoming connection: 127.0.0.1:59520
+[18:27:20] Incoming connection: 127.0.0.1:59521
+[18:27:20] Incoming connection: 127.0.0.1:59522
+[18:27:20] Incoming connection: 127.0.0.1:59523
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:20] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Cargando coches en propiedad 
+[18:27:21] -------------------------
+[18:27:21] 
+***** COCHES EN PROPIEDAD CARGADOS ******
+
+
+[18:27:21] Cargando bandas 
+[18:27:21] -------------------------
+[18:27:21] 
+***** 0 BANDAS CARGADAS ******
+
+
+[18:27:21] Cargando coches bandas 
+[18:27:21] -------------------------
+[18:27:21] 
+***** COCHES DE BANDAS CARGADOS ******
+
+
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21]  Vendetta's Revenge
+[18:27:21] _____________________
+[18:27:21]  By Los Vendetta
+[18:27:21]  
+[18:27:21] Number of vehicle models: 31
+[18:27:21] [npc:join] vendetta_drogacocheNPC has joined the server (0:127.0.0.1)
+[18:27:21] [npc:join] muelle_andaNPC has joined the server (1:127.0.0.1)
+[18:27:21] [npc:join] muelle_fumaNPC has joined the server (2:127.0.0.1)
+[18:27:21] [npc:join] muelle_armado1NPC has joined the server (3:127.0.0.1)
+[18:27:21] [npc:join] muelle_armado3NPC has joined the server (5:127.0.0.1)
+[18:27:21] [npc:join] muelle_armado2NPC has joined the server (4:127.0.0.1)
+[18:27:21] [npc:join] muelle_armado4NPC has joined the server (6:127.0.0.1)
+[18:27:21] [npc:join] muelle_pizarraNPC has joined the server (7:127.0.0.1)
+[18:27:21] [npc:join] lider_mecanicoNPC has joined the server (8:127.0.0.1)
+[18:27:21] [npc:join] mecanico1NPC has joined the server (9:127.0.0.1)
+[18:27:21] [npc:join] mecanico2NPC has joined the server (10:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59572
+[18:27:21] Incoming connection: 127.0.0.1:59573
+[18:27:21] Incoming connection: 127.0.0.1:59574
+[18:27:21] [npc:join] vendetta_armas1NPC has joined the server (11:127.0.0.1)
+[18:27:21] [npc:join] vendetta_armas2NPC has joined the server (12:127.0.0.1)
+[18:27:21] [npc:join] vendetta_armas3NPC has joined the server (13:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59524
+[18:27:21] Incoming connection: 127.0.0.1:59525
+[18:27:21] Incoming connection: 127.0.0.1:59526
+[18:27:21] Incoming connection: 127.0.0.1:59527
+[18:27:21] Incoming connection: 127.0.0.1:59528
+[18:27:21] Incoming connection: 127.0.0.1:59529
+[18:27:21] Incoming connection: 127.0.0.1:59530
+[18:27:21] Incoming connection: 127.0.0.1:59531
+[18:27:21] Incoming connection: 127.0.0.1:59532
+[18:27:21] Incoming connection: 127.0.0.1:59533
+[18:27:21] Incoming connection: 127.0.0.1:59534
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] [npc:join] entierro_unoNPC has joined the server (14:127.0.0.1)
+[18:27:21] [npc:join] entierro_dosNPC has joined the server (15:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59543
+[18:27:21] Incoming connection: 127.0.0.1:59544
+[18:27:21] [npc:join] entierro_tresNPC has joined the server (16:127.0.0.1)
+[18:27:21] [npc:join] entierro_cuatroNPC has joined the server (17:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59545
+[18:27:21] Incoming connection: 127.0.0.1:59546
+[18:27:21] [npc:join] entierro_cincoNPC has joined the server (18:127.0.0.1)
+[18:27:21] [npc:join] entierro_seisNPC has joined the server (19:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59547
+[18:27:21] Incoming connection: 127.0.0.1:59548
+[18:27:21] [npc:join] entierro_sieteNPC has joined the server (20:127.0.0.1)
+[18:27:21] [npc:join] entierro_mafiosoNPC has joined the server (21:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59549
+[18:27:21] Incoming connection: 127.0.0.1:59550
+[18:27:21] [npc:join] entierro_mafioso1NPC has joined the server (22:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59551
+[18:27:21] [npc:join] entierro_curaNPC has joined the server (23:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59552
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] [npc:join] entierro_protaNPC has joined the server (24:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59554
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] [npc:join] banquero1NPC has joined the server (25:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59561
+[18:27:21] [npc:join] banquero2NPC has joined the server (26:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59562
+[18:27:21] Blocking 127.0.0.1 due to a 'server full' attack (1)
+[18:27:21] [npc:join] poli_1NPC has joined the server (27:127.0.0.1)
+[18:27:21] [npc:join] poli_2NPC has joined the server (28:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59564
+[18:27:21] [npc:join] poli_3NPC has joined the server (29:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59565
+[18:27:21] [npc:join] poli_4NPC has joined the server (30:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59566
+[18:27:21] [npc:join] poli_5NPC has joined the server (31:127.0.0.1)
+[18:27:21] [npc:join] poli_6NPC has joined the server (32:127.0.0.1)
+[18:27:21] Incoming connection: 127.0.0.1:59567
+[18:27:21] Incoming connection: 127.0.0.1:59568
+[18:27:21] Incoming connection: 127.0.0.1:59569
+[18:27:21] [npc:join] policia_controlNPC has joined the server (33:127.0.0.1)
+[18:27:21] [npc:join] policia_control1NPC has joined the server (34:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59570
+[18:27:22] Incoming connection: 127.0.0.1:59571
+[18:27:22] [npc:join] policia_control3NPC has joined the server (35:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga4NPC has joined the server (36:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga5bossNPC has joined the server (37:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga7NPC has joined the server (38:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga8NPC has joined the server (39:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga9bossNPC has joined the server (40:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga10NPC has joined the server (41:127.0.0.1)
+[18:27:22] [npc:join] vendetta_droga11bossNPC has joined the server (42:127.0.0.1)
+[18:27:22] [npc:join] vendetta_drogagirlNPC has joined the server (43:127.0.0.1)
+[18:27:22] [npc:join] vendetta_drogagirl1NPC has joined the server (44:127.0.0.1)
+[18:27:22] [npc:join] vendetta_armasNPC has joined the server (45:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59536
+[18:27:22] Incoming connection: 127.0.0.1:59538
+[18:27:22] Incoming connection: 127.0.0.1:59537
+[18:27:22] Incoming connection: 127.0.0.1:59540
+[18:27:22] Incoming connection: 127.0.0.1:59539
+[18:27:22] Incoming connection: 127.0.0.1:59541
+[18:27:22] Incoming connection: 127.0.0.1:59542
+[18:27:22] Incoming connection: 127.0.0.1:59553
+[18:27:22] [npc:join] create_bandaNPC has joined the server (46:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59555
+[18:27:22] [npc:join] create_banda1NPC has joined the server (48:127.0.0.1)
+[18:27:22] [npc:join] create_bandabossNPC has joined the server (47:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59556
+[18:27:22] Incoming connection: 127.0.0.1:59557
+[18:27:22] [npc:join] bombero_bossNPC has joined the server (49:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59558
+[18:27:22] [npc:join] bomberoNPC has joined the server (50:127.0.0.1)
+[18:27:22] [npc:join] tirao1NPC has joined the server (51:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59559
+[18:27:22] [npc:join] banqueroNPC has joined the server (52:127.0.0.1)
+[18:27:22] Incoming connection: 127.0.0.1:59560
+[18:27:22] Incoming connection: 127.0.0.1:59563
+[18:27:23] [npc:join] policia_control2NPC has joined the server (53:127.0.0.1)
+[18:27:23] [npc:join] policia_control4NPC has joined the server (54:127.0.0.1)
+[18:27:23] [npc:join] policia_control5NPC has joined the server (55:127.0.0.1)
+[18:27:23] [npc:join] vendetta_drogaNPC has joined the server (56:127.0.0.1)
+[18:27:23] [npc:join] vendetta_droga1NPC has joined the server (57:127.0.0.1)
+[18:27:23] [npc:join] vendetta_droga2NPC has joined the server (58:127.0.0.1)
+[18:27:23] [npc:join] vendetta_droga3NPC has joined the server (59:127.0.0.1)
+[18:27:23] [npc:join] vendetta_droga6NPC has joined the server (60:127.0.0.1)
+[18:27:47] Incoming connection: 127.0.0.1:63697
+[18:27:47] [join] tote has joined the server (61:127.0.0.1)
+[18:27:57] tote has logged in
+[18:29:24] Incoming connection: 79.159.162.128:54339
+[18:29:24] [join] Pataki has joined the server (62:79.159.162.128)
+[18:29:39] Pataki has logged in
+[18:33:21] [death] tote died 255
+[18:40:27] [death] tote died 54
+[18:49:11] [part] Pataki has left the server (62:1)
+[18:52:48] [part] tote has left the server (61:1)
+[18:59:25] Incoming connection: 127.0.0.1:51441
+[18:59:25] [join] tote has joined the server (61:127.0.0.1)
+[18:59:43] tote has logged in
+[19:11:56] [part] tote has left the server (61:1)
