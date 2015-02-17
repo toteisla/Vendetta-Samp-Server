@@ -698,6 +698,7 @@ enum pInfo
 	pLevel,
 	pAdmin,
 	pReg,
+	pPresentacion,
 	pExp,
 	pCash,
 	pJailed,
@@ -1844,6 +1845,7 @@ public OnPlayerDisconnect(playerid)
 	PlayerInfo[playerid][pAdmin] = 0;
 //	PlayerInfo[playerid][pParking] = 0;
 	PlayerInfo[playerid][pExp] = 0;
+	PlayerInfo[playerid][pPresentacion] = 0;
 	PlayerInfo[playerid][pJailed] = 0;
 	PlayerInfo[playerid][pJailTime] = 0;
 	PlayerInfo[playerid][pPos_x] = 0.0;
@@ -1865,6 +1867,10 @@ public OnPlayerDisconnect(playerid)
 	HideProgressBarForPlayer(playerid, satisBar[playerid]);
 	PlayerTextDrawDestroy(playerid, mTiempoText[playerid]);
 	PlayerTextDrawDestroy(playerid, EscenaText[playerid]);
+	
+	//Limpia los timers de la ESCENA_INTRO
+	tEscena[playerid] = 0;
+	FinEscena(playerid);
 	
 	return 1;
 }
@@ -3361,6 +3367,7 @@ public OnPlayerRegister(playerid, password[])
 				format(var, 32, "Level=%d\n",PlayerInfo[playerid][pLevel]);fwrite(hFile, var);
 				format(var, 32, "AdminLevel=%d\n",PlayerInfo[playerid][pAdmin]);fwrite(hFile, var);
 				format(var, 32, "Registered=%d\n",PlayerInfo[playerid][pReg]);fwrite(hFile, var);
+				format(var, 32, "Presentacion=%d\n",PlayerInfo[playerid][pPresentacion]);fwrite(hFile, var);
 				format(var, 32, "Exp=%d\n",PlayerInfo[playerid][pExp]);fwrite(hFile, var);
 				format(var, 32, "Money=%d\n",PlayerInfo[playerid][pCash]);fwrite(hFile, var);
 				format(var, 32, "Jailed=%d\n",PlayerInfo[playerid][pJailed]);fwrite(hFile, var);
@@ -3412,6 +3419,7 @@ public OnPlayerUpdate(playerid) {
 				format(var, sizeof(var), "Level=%d\n",PlayerInfo[playerid][pLevel]);fwrite(hFile, var);
 				format(var, sizeof(var), "AdminLevel=%d\n",PlayerInfo[playerid][pAdmin]);fwrite(hFile, var);
 				format(var, sizeof(var), "Registered=%d\n",PlayerInfo[playerid][pReg]);fwrite(hFile, var);
+				format(var, sizeof(var), "Presentacion=%d\n",PlayerInfo[playerid][pPresentacion]);fwrite(hFile, var);
 				format(var, sizeof(var), "Exp=%d\n",PlayerInfo[playerid][pExp]);fwrite(hFile, var);
 				format(var, sizeof(var), "Money=%d\n",PlayerInfo[playerid][pCash]);fwrite(hFile, var);
 				format(var, sizeof(var), "Jailed=%d\n",PlayerInfo[playerid][pJailed]);fwrite(hFile, var);
@@ -3506,6 +3514,7 @@ public OnPlayerLogin(playerid,password[])
 					if( strcmp( key , "Level" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pLevel] = strval( val ); }
 			    	if( strcmp( key , "AdminLevel" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pAdmin] = strval( val ); }
 			        if( strcmp( key , "Registered" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pReg] = strval( val ); }
+			        if( strcmp( key , "Presentacion" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pPresentacion] = strval( val ); }
 			        if( strcmp( key , "Exp" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pExp] = strval( val ); }
 			        if( strcmp( key , "Money" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pCash] = strval( val ); }
 			        if( strcmp( key , "Jailed" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pJailed] = strval( val ); }
@@ -3611,6 +3620,7 @@ public OnPlayerLogin(playerid,password[])
 		
 		gPlayerLogged[playerid] = 1;
 		TogglePlayerControllable(playerid,1);
+		
 		MostrarEscena(playerid, ESCENA_INTRO);
 	}
 	//StopAudioStreamForPlayer(playerid);
@@ -4545,7 +4555,10 @@ public FinEscena(playerid) {
 
 public escenas(playerid, escena){
 	if (escena == ESCENA_INTRO) {
-		//tEscena[playerid] = 0; // para saltar la intro
+	    //Si el jugador ya ha visto la intro se la salta
+	    if(PlayerInfo[playerid][pPresentacion] > 0)
+		    tEscena[playerid] = 54;
+		
 	 	if (tEscena[playerid] == 6){
    			SetPlayerCameraPos(playerid,-1554.1179,-1584.5360,60.0822);
 			SetPlayerCameraLookAt(playerid,-1578.3025,-1566.2902,35.9852);
@@ -4622,6 +4635,7 @@ public escenas(playerid, escena){
 		        SendClientMessage(playerid,COLOR_RED, "El líder de tu banda ha disuelto la misma, asi que te quedas sin banda");
 		        PlayerInfo[playerid][pBanda] = 0;
 		    }
+		    PlayerInfo[playerid][pPresentacion] = 1;
 		    FinEscena(playerid);
 	    }
 	} else if (escena == ESCENA_MISION_DROGA) {
