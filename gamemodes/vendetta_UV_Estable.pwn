@@ -1,3 +1,7 @@
+/*
+	Estoy en el de base de datos
+*/
+
 #include <a_samp>
 #include <core>
 #include <float>
