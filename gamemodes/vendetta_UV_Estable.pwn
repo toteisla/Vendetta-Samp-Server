@@ -1715,13 +1715,25 @@ public mostrarLogin(playerid){
 
 	if (IsPlayerNPC(playerid)) return 1;
 
- 	new plname[MAX_PLAYER_NAME];
+    new plname[MAX_PLAYER_NAME];
  	new string[MAX_PLAYER_NAME];
 	new aux[255];
 
 	GetPlayerName(playerid, plname, sizeof(plname));
 	format(string, sizeof(string), "%s.ini", plname);
-	if(fexist(string))
+
+//======================== DB LOGIN ==========================
+    new nrows;
+	new strQuery[512];
+	new query[512]; 
+	
+	strcat(strQuery, "SELECT * FROM `players` WHERE `Name`='%s'");
+	format(query, sizeof( query ), strQuery, plname);
+	mysql_query( mysql, query );
+	nrows = cache_get_row_count();
+	
+	
+	if( nrows > 0)
 	{
 		gPlayerAccount[playerid] = 1;
 		format(aux, sizeof(aux), "\n{7FFFD4}Nick: {1E90FF}%s Registrado\n\n{FFFFFF} Contraseña\n", plname);
@@ -1733,6 +1745,19 @@ public mostrarLogin(playerid){
 		format(aux, sizeof(aux), "\n{7FFFD4}Nick: {1E90FF}%s No registrado\n\n{FFFFFF} ¿Qué contraseña le quieres poner a tu cuenta?\n", plname);
 		ShowPlayerDialog(playerid, REGISTRO, DIALOG_STYLE_PASSWORD, "Registro", aux, "Registrate!", "Salir");
 	}
+	
+	/*
+	format(strQuery, sizeof( strQuery ), "Filas: %i", nrows);
+	print( strQuery );
+	
+	new error[128];
+	format(error, sizeof(error), "DB_ERROR: %i", mysql_errno( mysql ));
+	print( error );
+	*/
+	
+	
+//============================================================
+ 	
 	return 1;
  }
 
@@ -3430,8 +3455,9 @@ public OnPlayerRegister(playerid, password[])
 			strcat(string, " 0, 0, 0, now(), 0);");
 			format(query, sizeof(query), string, playername3, PlayerInfo[playerid][pKey]);
 			mysql_query(mysql, query);
+			
 			new error[128];
-			format(error, sizeof(error), "%i", mysql_errno( mysql ));
+			format(error, sizeof(error), "DB_ERROR: %i", mysql_errno( mysql ));
 			print( error );
 			// ==============================================================================================================
 			
