@@ -14,6 +14,16 @@
 #include <mVeh.inc>
 #include <pSelection.inc>
 #include <gvc.inc>
+#include <a_mysql.inc>
+
+// ================== DB INFO =================================
+#define DBHOST "127.0.0.1"
+#define DBUSER "tote"
+#define DBPASS "855858"
+#define DBNAME "gta"
+
+new mysql;
+// ============================================================
 
 #define CHECKPOINT_NONE 0
 #define CHECKPOINT_HOME 12
@@ -2538,6 +2548,17 @@ public PuertaCheck()
 //------------------------------------------------------------------------------------------------------
 public OnGameModeInit() {
 
+// ========================== DB Connection ===========================
+    mysql = mysql_connect(DBHOST, DBUSER, DBNAME, DBPASS);
+    mysql_log(LOG_ERROR | LOG_WARNING, LOG_TYPE_HTML); //logs errors and warnings into a nice HTML file
+    new stats[150];
+	mysql_stat(stats);
+	print("========= DB INFO =========");
+	print(stats);
+	print("===========================");
+// ====================================================================
+
+
     ConnectNPC("vendetta_drogacocheNPC","vendetta_drogacoche");
   	drogaNPCVeh= CreateVehicle(530, 0.0, 0.0, 5.0, 0.0, 0, 0, 5000);
 	ConnectNPC("muelle_andaNPC","muelle_anda");
@@ -3395,6 +3416,25 @@ public OnPlayerRegister(playerid, password[])
 				fclose(hFile);
 			//	SendClientMessage(playerid, COLOR_YELLOW, "Account registered, you can login now (/login [password]).");
 			}
+			
+			// ============================================== DB REGISTER ===================================================
+			new string[1024];
+			new query[1024];
+			strcat(string, "INSERT INTO `players`(`uID`, `Name`, `Password`, `Email`, `Sex`, `Race`, `Age`,");
+			strcat(string, "`Level`, `Admin`, `Registered`, `RegisterDate`, `Experience`, `Money`, `Jailed`,"); 
+			strcat(string, "`JailedTime`, `Interior`, `Job`, `Team`, `Rank`, `Model`, `Pos_X`, `Pos_Y`, `Pos_Z`,");
+			strcat(string, "`Wanted`, `Band`, `MissionBand`, `LastGameLogin`, `LastPcuLogin`) VALUES (");
+			strcat(string, " 0, '%s', '%s', 'a@a.com', 'hombre', 'humano', 10, ");
+			strcat(string, " 0, 0, 1, now(), 0, 0, 0, ");
+			strcat(string, " 0, 0, 0, 0, 0, 0, 1684, -2244, 13, ");
+			strcat(string, " 0, 0, 0, now(), 0);");
+			format(query, sizeof(query), string, playername3, PlayerInfo[playerid][pKey]);
+			mysql_query(mysql, query);
+			new error[128];
+			format(error, sizeof(error), "%i", mysql_errno( mysql ));
+			print( error );
+			// ==============================================================================================================
+			
 	}
 	return 1;
 }
@@ -11615,5 +11655,26 @@ public MenuTiendaHandler(playerid, skinid, precio){
 	new str[200];
 	format(str,sizeof(str), "Has seleccionado la skin %d que vale %d", skinid, precio);
 	SendClientMessage(playerid, COLOR_GREEN,str);
+}
+
+public OnQueryError(errorid, error[], callback[], query[], connectionHandle)
+{
+	new strError[1024];
+	format(strError, sizeof( strError ), "Error: %i | %s \nQuery: %s", errorid, error, query);
+
+	/*
+	switch(errorid)
+	{
+		case CR_SERVER_GONE_ERROR:
+		{
+			printf("Lost connection to server, trying reconnect...");
+			mysql_reconnect(connectionHandle);
+		}
+		case ER_SYNTAX_ERROR:
+		{
+			printf("Something is wrong in your syntax, query: %s",query);
+		}
+	}*/
+	return 1;
 }
 
