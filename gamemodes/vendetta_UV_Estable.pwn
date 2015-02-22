@@ -1730,9 +1730,9 @@ public mostrarLogin(playerid){
 	
 	strcat(strQuery, "SELECT * FROM `players` WHERE `Name`='%s'");
 	format(query, sizeof( query ), strQuery, plname);
-	mysql_query( mysql, query );
+	new Cache:result = mysql_query( mysql, query );
 	nrows = cache_get_row_count();
-	
+	cache_delete( result );
 	
 	if( nrows > 0)
 	{
@@ -1746,17 +1746,6 @@ public mostrarLogin(playerid){
 		format(aux, sizeof(aux), "\n{7FFFD4}Nick: {1E90FF}%s No registrado\n\n{FFFFFF} ¿Qué contraseña le quieres poner a tu cuenta?\n", plname);
 		ShowPlayerDialog(playerid, REGISTRO, DIALOG_STYLE_PASSWORD, "Registro", aux, "Registrate!", "Salir");
 	}
-	
-	/*
-	format(strQuery, sizeof( strQuery ), "Filas: %i", nrows);
-	print( strQuery );
-	
-	new error[128];
-	format(error, sizeof(error), "DB_ERROR: %i", mysql_errno( mysql ));
-	print( error );
-	*/
-	
-	
 //============================================================
  	
 	return 1;
@@ -3477,64 +3466,76 @@ public OnPlayerUpdate(playerid) {
 					GetPlayerWeaponData(playerid, i, PlayerInfo[playerid][pWeapon][i], PlayerInfo[playerid][pAmmo][i]);
 				}
 			}
+			
 			new string3[32];
 			new playername3[MAX_PLAYER_NAME];
 			GetPlayerName(playerid, playername3, sizeof(playername3));
 			format(string3, sizeof(string3), "%s.ini", playername3);
+			
+			PlayerInfo[playerid][pCash] = GetPlayerMoney(playerid);
+			
+			if ((PlayerInfo[playerid][pPos_x]==0.0 && PlayerInfo[playerid][pPos_y]==0.0 && PlayerInfo[playerid][pPos_z]==0.0)){
+				PlayerInfo[playerid][pPos_x] = 1684.9;
+				PlayerInfo[playerid][pPos_y] = -2244.5;
+				PlayerInfo[playerid][pPos_z] = 13.5;
+			}
+//===================================================================== DB UPDATE =====================================================================
+			new strQuery[512];
+			new query[512];
+			new error[124];
+			
+			//Update player info
+			strcat(strQuery, "UPDATE `players` SET `Level` = '%i', `Admin` = '%i', Registered = '%i', `Intro` = '%i', ");
+			strcat(strQuery, "`Experience` = '%i', `Money` = '%i', `Jailed` = '%i', `JailTime` = '%i', `Interior` = '%i', ");
+			strcat(strQuery, "`Job` = '%i', `Team` = '%i', `Rank` = '%i', `Model` = '%i', `Wanted` = '%i', ");
+			strcat(strQuery, "`Pos_X` = '%f', `Pos_Y` = '%f', `Pos_Z` = '%f', `Band` = '%i', `MissionBand` = '%i', `LastGameLogin` = now() ");
+			strcat(strQuery, "WHERE `uID` = '%i'");
+			format(query, sizeof( query ), strQuery, PlayerInfo[playerid][pLevel], PlayerInfo[playerid][pAdmin], PlayerInfo[playerid][pReg],
+				PlayerInfo[playerid][pPresentacion], PlayerInfo[playerid][pExp], PlayerInfo[playerid][pCash], PlayerInfo[playerid][pJailed],
+				PlayerInfo[playerid][pJailTime], PlayerInfo[playerid][pInt], PlayerInfo[playerid][pJob], PlayerInfo[playerid][pTeam],
+				PlayerInfo[playerid][pRank], PlayerInfo[playerid][pModel], PlayerInfo[playerid][pWanted], PlayerInfo[playerid][pPos_x],
+				PlayerInfo[playerid][pPos_y], PlayerInfo[playerid][pPos_z], PlayerInfo[playerid][pBanda], PlayerInfo[playerid][pMisionBanda],
+				PlayerInfo[playerid][pID]);
+			mysql_query( mysql, query );
+
+			//Update weapon info
+			strQuery = "";
+			strcat(strQuery, "UPDATE `weapons` SET `Slot_0` = '%i', `Slot_1` = '%i', Slot_2 = '%i', `Slot_3` = '%i', ");
+			strcat(strQuery, "`Slot_4` = '%i', `Slot_5` = '%i', `Slot_6` = '%i', `Slot_7` = '%i', `Slot_8` = '%i', ");
+			strcat(strQuery, "`Slot_9` = '%i', `Slot_10` = '%i', `Slot_11` = '%i', `Slot_12` = '%i', `Ammo_0` = '%i', ");
+			strcat(strQuery, "`Ammo_1` = '%f', `Ammo_2` = '%f', `Ammo_3` = '%f', `Ammo_4` = '%i', `Ammo_5` = '%i', `Ammo_6` = '%i', ");
+			strcat(strQuery, "`Ammo_7` = '%f', `Ammo_8` = '%f', `Ammo_9` = '%f', `Ammo_10` = '%i', `Ammo_11` = '%i', `Ammo_12` = '%i' ");
+			strcat(strQuery, "WHERE `uID` = '%i'");
+			format(query, sizeof( query ), strQuery, PlayerInfo[playerid][pWeapon][0], PlayerInfo[playerid][pWeapon][1], PlayerInfo[playerid][pWeapon][2],
+				PlayerInfo[playerid][pWeapon][3], PlayerInfo[playerid][pWeapon][4], PlayerInfo[playerid][pWeapon][5], PlayerInfo[playerid][pWeapon][6],
+				PlayerInfo[playerid][pWeapon][7], PlayerInfo[playerid][pWeapon][8], PlayerInfo[playerid][pWeapon][9], PlayerInfo[playerid][pWeapon][10],
+				PlayerInfo[playerid][pWeapon][11], PlayerInfo[playerid][pWeapon][12], PlayerInfo[playerid][pAmmo][0], PlayerInfo[playerid][pWeapon][1],
+				PlayerInfo[playerid][pWeapon][2], PlayerInfo[playerid][pWeapon][3], PlayerInfo[playerid][pWeapon][4], PlayerInfo[playerid][pWeapon][5],
+			    PlayerInfo[playerid][pWeapon][6], PlayerInfo[playerid][pWeapon][7], PlayerInfo[playerid][pWeapon][8], PlayerInfo[playerid][pWeapon][9],
+			    PlayerInfo[playerid][pWeapon][10], PlayerInfo[playerid][pWeapon][11], PlayerInfo[playerid][pWeapon][12], PlayerInfo[playerid][pID]);
+			mysql_query( mysql, query );
+
+            //Update skill info
+			strQuery = "";
+			strcat(strQuery, "UPDATE `skills` SET `Skill_0` = '%i', `Skill_1` = '%i', Skill_2 = '%i', `Skill_3` = '%i', ");
+			strcat(strQuery, "`Skill_4` = '%i', `Skill_5` = '%i', `Skill_6` = '%i', `Skill_7` = '%i', `Skill_8` = '%i', ");
+			strcat(strQuery, "`Skill_9` = '%i', `Skill_10` = '%i', `Skill_11` = '%i'" );
+			strcat(strQuery, "WHERE `uID` = '%i'");
+			format(query, sizeof( query ), strQuery, PlayerInfo[playerid][pSkill][0], PlayerInfo[playerid][pSkill][1], PlayerInfo[playerid][pSkill][2],
+				PlayerInfo[playerid][pSkill][3], PlayerInfo[playerid][pSkill][4], PlayerInfo[playerid][pSkill][5], PlayerInfo[playerid][pSkill][6],
+				PlayerInfo[playerid][pSkill][7], PlayerInfo[playerid][pSkill][8], PlayerInfo[playerid][pSkill][9], PlayerInfo[playerid][pSkill][10],
+				PlayerInfo[playerid][pSkill][11], PlayerInfo[playerid][pID]);
+			mysql_query( mysql, query );
+			
+			format(error, sizeof( error ), "DB_ERROR: %i", mysql_errno( mysql ));
+			print( query );
+			print( error );
+//=====================================================================================================================================================
+			
 			new File: hFile = fopen(string3, io_write);
 			if (hFile)
 			{
 				new var[30];
-				format(var, sizeof(var), "Key=%s\n", PlayerInfo[playerid][pKey]);fwrite(hFile, var);
-				PlayerInfo[playerid][pCash] = GetPlayerMoney(playerid);
-				format(var, sizeof(var), "Level=%d\n",PlayerInfo[playerid][pLevel]);fwrite(hFile, var);
-				format(var, sizeof(var), "AdminLevel=%d\n",PlayerInfo[playerid][pAdmin]);fwrite(hFile, var);
-				format(var, sizeof(var), "Registered=%d\n",PlayerInfo[playerid][pReg]);fwrite(hFile, var);
-				format(var, sizeof(var), "Presentacion=%d\n",PlayerInfo[playerid][pPresentacion]);fwrite(hFile, var);
-				format(var, sizeof(var), "Exp=%d\n",PlayerInfo[playerid][pExp]);fwrite(hFile, var);
-				format(var, sizeof(var), "Money=%d\n",PlayerInfo[playerid][pCash]);fwrite(hFile, var);
-				format(var, sizeof(var), "Jailed=%d\n",PlayerInfo[playerid][pJailed]);fwrite(hFile, var);
-				format(var, sizeof(var), "JailTime=%d\n",PlayerInfo[playerid][pJailTime]);fwrite(hFile, var);
-				format(var, sizeof(var), "Int=%d\n",PlayerInfo[playerid][pInt]);fwrite(hFile, var);
-				format(var, sizeof(var), "Job=%d\n",PlayerInfo[playerid][pJob]);fwrite(hFile, var);
-				format(var, sizeof(var), "Team=%d\n",PlayerInfo[playerid][pTeam]);fwrite(hFile, var);
-				format(var, sizeof(var), "rank=%d\n",PlayerInfo[playerid][pRank]);fwrite(hFile, var);
-				format(var, sizeof(var), "Model=%d\n",PlayerInfo[playerid][pModel]);fwrite(hFile, var);
-				if ((PlayerInfo[playerid][pPos_x]==0.0 && PlayerInfo[playerid][pPos_y]==0.0 && PlayerInfo[playerid][pPos_z]==0.0))
-				{
-					PlayerInfo[playerid][pPos_x] = 1684.9;
-					PlayerInfo[playerid][pPos_y] = -2244.5;
-					PlayerInfo[playerid][pPos_z] = 13.5;
-				}
-
-				fwrite(hFile,"Weapon=");
-				for (new i = 0; i < 13; i++) {
-				    format(var,sizeof(var), "%d ",PlayerInfo[playerid][pWeapon][i]);
-				    fwrite(hFile, var);
-				}
-				fwrite(hFile,"\n");
-
-				fwrite(hFile,"Ammo=");
-				for (new i = 0; i < 13; i++) {
-				    format(var,sizeof(var), "%d ",PlayerInfo[playerid][pAmmo][i]);
-				    fwrite(hFile, var);
-				}
-				fwrite(hFile,"\n");
-
-				format(var, sizeof(var), "Pos_x=%.1f\n",PlayerInfo[playerid][pPos_x]);fwrite(hFile, var);
-				format(var, sizeof(var), "Pos_y=%.1f\n",PlayerInfo[playerid][pPos_y]);fwrite(hFile, var);
-				format(var, sizeof(var), "Pos_z=%.1f\n",PlayerInfo[playerid][pPos_z]);fwrite(hFile, var);
-				format(var, sizeof(var), "Wanted=%d\n",PlayerInfo[playerid][pWanted]);fwrite(hFile, var);
-				format(var, sizeof(var), "Banda=%d\n",PlayerInfo[playerid][pBanda]);fwrite(hFile, var);
-				format(var, sizeof(var), "MisionBanda=%d\n",PlayerInfo[playerid][pMisionBanda]);fwrite(hFile, var);
-				
-				fwrite(hFile,"Skill=");
-				for (new i = 0; i < NUM_SKILLS; i++) {
-				    format(var,sizeof(var), "%d ",PlayerInfo[playerid][pSkill][i]);
-				    fwrite(hFile, var);
-				}
-				fwrite(hFile,"\n");
-				
 				fwrite(hFile,"CarKeys=");
 				for (new i = 0; i < MAX_PLAYER_CAR_KEYS; i++) {
 				    format(var,sizeof(var), "%d ",PlayerInfo[playerid][pCarKeys][i]);
@@ -3567,7 +3568,7 @@ public OnPlayerLogin(playerid,password[])
 //============================================= DB LOGIN ==========================================================================================
 	new strQuery[512];
 	new query[512];
-	new error[512];
+	//new error[512];
 	strcat( strQuery, "SELECT * FROM `players` WHERE `Name`='%s' AND `Password`='%s'");
 	format(query, sizeof( query ), strQuery, playername2, password);
 	new Cache:result = mysql_query( mysql, query );
@@ -3583,25 +3584,25 @@ public OnPlayerLogin(playerid,password[])
 	    //Get player info
 	    for(new i=0 ; i<nFields ; i++){
 	        cache_get_field_name( i, fName, mysql, sizeof( fName ) );
-	        if( strcmp( fName, "uID", true) == 0 ){ PlayerInfo[playerid][pID] = cache_get_field_content_int(0, "uID"); }
-	        if( strcmp( fName, "Level", true) == 0 ){ PlayerInfo[playerid][pLevel] = cache_get_field_content_int(0, "Level"); }
-	        if( strcmp( fName, "Admin", true) == 0 ){ PlayerInfo[playerid][pAdmin] = cache_get_field_content_int(0, "Admin"); }
-	        if( strcmp( fName, "Registered", true) == 0 ){ PlayerInfo[playerid][pReg] = cache_get_field_content_int(0, "Registered"); }
-	        if( strcmp( fName, "Intro", true) == 0 ){ PlayerInfo[playerid][pPresentacion] = cache_get_field_content_int(0, "Intro"); }
-	        if( strcmp( fName, "Experience", true) == 0 ){ PlayerInfo[playerid][pExp] = cache_get_field_content_int(0, "Experience"); }
-	        if( strcmp( fName, "Money", true) == 0 ){ PlayerInfo[playerid][pCash] = cache_get_field_content_int(0, "Money"); }
-	        if( strcmp( fName, "Jailed", true) == 0 ){ PlayerInfo[playerid][pJailed] = cache_get_field_content_int(0, "Jailed"); }
-	        if( strcmp( fName, "JailTime", true) == 0 ){ PlayerInfo[playerid][pJailed] = cache_get_field_content_int(0, "JailTime"); }
-	        if( strcmp( fName, "Interior", true) == 0 ){ PlayerInfo[playerid][pInt] = cache_get_field_content_int(0, "Interior"); }
-	        if( strcmp( fName, "Job", true) == 0 ){ PlayerInfo[playerid][pJob] = cache_get_field_content_int(0, "Job"); }
-	        if( strcmp( fName, "Team", true) == 0 ){ PlayerInfo[playerid][pTeam] = cache_get_field_content_int(0, "Team"); }
-	        if( strcmp( fName, "Rank", true) == 0 ){ PlayerInfo[playerid][pRank] = cache_get_field_content_int(0, "Rank"); }
-	        if( strcmp( fName, "Model", true) == 0 ){ PlayerInfo[playerid][pModel] = cache_get_field_content_int(0, "Model"); }
-	        if( strcmp( fName, "Pos_X", true) == 0 ){ PlayerInfo[playerid][pPos_x] = cache_get_field_content_float(0, "Pos_X"); }
-	        if( strcmp( fName, "Pos_Y", true) == 0 ){ PlayerInfo[playerid][pPos_y] = cache_get_field_content_float(0, "Pos_Y"); }
-	        if( strcmp( fName, "Pos_Z", true) == 0 ){ PlayerInfo[playerid][pPos_z] = cache_get_field_content_float(0, "Pos_Z"); }
-	        if( strcmp( fName, "Wanted", true) == 0 ){ PlayerInfo[playerid][pWanted] = cache_get_field_content_int(0, "Wanted"); }
-	        if( strcmp( fName, "Band", true) == 0 ){ PlayerInfo[playerid][pBanda] = cache_get_field_content_int(0, "Band"); }
+	        if( strcmp( fName, "uID", true) == 0 ){ PlayerInfo[playerid][pID] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Level", true) == 0 ){ PlayerInfo[playerid][pLevel] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Admin", true) == 0 ){ PlayerInfo[playerid][pAdmin] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Registered", true) == 0 ){ PlayerInfo[playerid][pReg] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Intro", true) == 0 ){ PlayerInfo[playerid][pPresentacion] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Experience", true) == 0 ){ PlayerInfo[playerid][pExp] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Money", true) == 0 ){ PlayerInfo[playerid][pCash] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Jailed", true) == 0 ){ PlayerInfo[playerid][pJailed] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "JailTime", true) == 0 ){ PlayerInfo[playerid][pJailed] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Interior", true) == 0 ){ PlayerInfo[playerid][pInt] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Job", true) == 0 ){ PlayerInfo[playerid][pJob] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Team", true) == 0 ){ PlayerInfo[playerid][pTeam] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Rank", true) == 0 ){ PlayerInfo[playerid][pRank] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Model", true) == 0 ){ PlayerInfo[playerid][pModel] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Pos_X", true) == 0 ){ PlayerInfo[playerid][pPos_x] = cache_get_field_content_float(0, fName); }
+	        if( strcmp( fName, "Pos_Y", true) == 0 ){ PlayerInfo[playerid][pPos_y] = cache_get_field_content_float(0, fName); }
+	        if( strcmp( fName, "Pos_Z", true) == 0 ){ PlayerInfo[playerid][pPos_z] = cache_get_field_content_float(0, fName); }
+	        if( strcmp( fName, "Wanted", true) == 0 ){ PlayerInfo[playerid][pWanted] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, "Band", true) == 0 ){ PlayerInfo[playerid][pBanda] = cache_get_field_content_int(0, fName); }
 	    }
 	    cache_delete( result, mysql );
 
@@ -3653,7 +3654,7 @@ public OnPlayerLogin(playerid,password[])
 		for(new i=0 ; i<nrows ; i++){
 		    for(new j=0 ; j<nFields ; j++){
 		        cache_get_field_name( j, fName, mysql, sizeof( fName ) );
-		        if( strcmp( fName, "Key", true) == 0 ){ PlayerInfo[playerid][pCarKeys][i] = cache_get_field_content_int(i, fName); }
+		        if( strcmp( fName, "CarKey", true) == 0 ){ PlayerInfo[playerid][pCarKeys][i] = cache_get_field_content_int(i, fName); }
 	        }
 	    }
 	    cache_delete( result, mysql );
