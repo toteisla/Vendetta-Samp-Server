@@ -708,6 +708,7 @@ new TimerTiempoVidaDropID;
 //general
 enum pInfo
 {
+	pID,
 	pKey[128],
 	pLevel,
 	pAdmin,
@@ -3562,108 +3563,104 @@ public OnPlayerLogin(playerid,password[])
 	new playername2[MAX_PLAYER_NAME];
     GetPlayerName(playerid, playername2, sizeof(playername2));
 	format(string2, sizeof(string2), "%s.ini", playername2);
-	new File: UserFile = fopen(string2, io_read);
-	if ( UserFile )
-	{
-	    new PassData[256];
-	    new keytmp[256], valtmp[256];
-	    fread( UserFile , PassData , sizeof( PassData ) );
-	    keytmp = ini_GetKey( PassData );
-	    if( strcmp( keytmp , "Key" , true ) == 0 )
-		{
-			valtmp = ini_GetValue( PassData );
-			strmid(PlayerInfo[playerid][pKey], valtmp, 0, strlen(valtmp)-1, 255);
-		}
-		if(strcmp(PlayerInfo[playerid][pKey],password, true ) == 0 )
-		{
-			    new key[ 256 ] , val[ 256 ];
-			    new Data[ 256 ];
-			    while ( fread( UserFile , Data , sizeof( Data ) ) )
-				{
-					key = ini_GetKey( Data );
-					if( strcmp( key , "Level" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pLevel] = strval( val ); }
-			    	if( strcmp( key , "AdminLevel" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pAdmin] = strval( val ); }
-			        if( strcmp( key , "Registered" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pReg] = strval( val ); }
-			        if( strcmp( key , "Presentacion" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pPresentacion] = strval( val ); }
-			        if( strcmp( key , "Exp" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pExp] = strval( val ); }
-			        if( strcmp( key , "Money" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pCash] = strval( val ); }
-			        if( strcmp( key , "Jailed" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pJailed] = strval( val ); }
-			        if( strcmp( key , "JailTime" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pJailTime] = strval( val ); }
-			   		if( strcmp( key , "Int" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pInt] = strval( val ); }
-					if( strcmp( key , "Job" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pJob] = strval( val ); }
-			        if( strcmp( key , "Team" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pTeam] = strval( val ); }
-			        if( strcmp( key , "Rank" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pRank] = strval( val ); }
-			        if( strcmp( key , "Model" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pModel] = strval( val ); }
-   	 				if( strcmp( key , "Pos_x" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pPos_x] = floatstr( val ); }
-			        if( strcmp( key , "Pos_y" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pPos_y] = floatstr( val ); }
-			        if( strcmp( key , "Pos_z" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pPos_z] = floatstr( val ); }
-			        if( strcmp( key , "Weapon" , true ) == 0 ) {
-						val = ini_GetValue( Data );
-						new idx = 0;
-						new num = 0;
-			        	for (new i = 0; i < 13; i++) {
-			        	    num = strval(strtok(val, idx));
-							PlayerInfo[playerid][pWeapon][i] = num;
-						}
-					}
-					
-					if( strcmp( key , "Ammo" , true ) == 0 ) {
-						val = ini_GetValue( Data );
-						new idx = 0;
-						new num = 0;
-			        	for (new i = 0; i < 13; i++) {
-			        	    num = strval(strtok(val, idx));
-							PlayerInfo[playerid][pAmmo][i] = num;
-						}
-					}
-					
-			        if( strcmp( key , "Wanted" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pWanted] = strval( val ); }
-					if( strcmp( key , "Banda" , true ) == 0 ) { val = ini_GetValue( Data ); PlayerInfo[playerid][pBanda] = strval( val ); }
-					if( strcmp( key , "Skill" , true ) == 0 ) {
-						val = ini_GetValue( Data );
-						new idx = 0;
-						new num = 0;
-			        	for (new i = 0; i < NUM_SKILLS; i++) {
-			        	    num = strval(strtok(val, idx));
-							PlayerInfo[playerid][pSkill][i] = num;
-						}
-					}
-					if( strcmp( key , "CarKeys" , true ) == 0 ) {
-						val = ini_GetValue( Data );
-						new idx = 0;
-						new num = 0;
-			        	for (new i = 0; i < MAX_PLAYER_CAR_KEYS; i++) {
-			        	    num = strval(strtok(val, idx));
-							PlayerInfo[playerid][pCarKeys][i] = num;
-						}
-					}
-					if (strcmp(key, "Inventario", true) == 0) {
-						val = ini_GetValue( Data );
-						new idx = 0;
-						new num = 0;
-			        	for (new i = 0; i < MAX_INVENTARIO; i++) {
-			        	    num = strval(strtok(val, idx));
-							PlayerInfo[playerid][pInventario][i] = num;
-							if (num != 0)
-								numItems[playerid]++;
-						}
-					}
-	           }//end while
-                fclose(UserFile);
-		}
-		else
-		{
-			SendClientMessage(playerid, COLOR_WHITE, "SERVER: Contraseña incorrecta.");
-	        fclose(UserFile);
-	        gPlayerLogTries[playerid] += 1;
-	        if(gPlayerLogTries[playerid] == 4) { Ban(playerid); }
-			new aux[255];
-        	format(aux, sizeof(aux), "\n{7FFFD4}Nick: {1E90FF}%s Registered\n\n{FFFFFF} Contraseña\n", playername2);
-	        ShowPlayerDialog(playerid, LOGIN, DIALOG_STYLE_PASSWORD, "Login", aux, "Login", "Cancelar");
 
-	        return 1;
-		}
-		PlayerInfo[playerid][pLogged] = 1;
+//============================================= DB LOGIN ==========================================================================================
+	new strQuery[512];
+	new query[512];
+	new error[512];
+	strcat( strQuery, "SELECT * FROM `players` WHERE `Name`='%s' AND `Password`='%s'");
+	format(query, sizeof( query ), strQuery, playername2, password);
+	new Cache:result = mysql_query( mysql, query );
+
+	new nrows;
+	nrows = cache_get_row_count();
+
+	if( nrows > 0){
+	    new nFields;
+	    new fName[64];
+	    nFields = cache_get_field_count();
+
+	    //Get player info
+	    for(new i=0 ; i<nFields ; i++){
+	        cache_get_field_name( i, fName, mysql, sizeof( fName ) );
+	        if( strcmp( fName, "uID", true) == 0 ){ PlayerInfo[playerid][pID] = cache_get_field_content_int(0, "uID"); }
+	        if( strcmp( fName, "Level", true) == 0 ){ PlayerInfo[playerid][pLevel] = cache_get_field_content_int(0, "Level"); }
+	        if( strcmp( fName, "Admin", true) == 0 ){ PlayerInfo[playerid][pAdmin] = cache_get_field_content_int(0, "Admin"); }
+	        if( strcmp( fName, "Registered", true) == 0 ){ PlayerInfo[playerid][pReg] = cache_get_field_content_int(0, "Registered"); }
+	        if( strcmp( fName, "Intro", true) == 0 ){ PlayerInfo[playerid][pPresentacion] = cache_get_field_content_int(0, "Intro"); }
+	        if( strcmp( fName, "Experience", true) == 0 ){ PlayerInfo[playerid][pExp] = cache_get_field_content_int(0, "Experience"); }
+	        if( strcmp( fName, "Money", true) == 0 ){ PlayerInfo[playerid][pCash] = cache_get_field_content_int(0, "Money"); }
+	        if( strcmp( fName, "Jailed", true) == 0 ){ PlayerInfo[playerid][pJailed] = cache_get_field_content_int(0, "Jailed"); }
+	        if( strcmp( fName, "JailTime", true) == 0 ){ PlayerInfo[playerid][pJailed] = cache_get_field_content_int(0, "JailTime"); }
+	        if( strcmp( fName, "Interior", true) == 0 ){ PlayerInfo[playerid][pInt] = cache_get_field_content_int(0, "Interior"); }
+	        if( strcmp( fName, "Job", true) == 0 ){ PlayerInfo[playerid][pJob] = cache_get_field_content_int(0, "Job"); }
+	        if( strcmp( fName, "Team", true) == 0 ){ PlayerInfo[playerid][pTeam] = cache_get_field_content_int(0, "Team"); }
+	        if( strcmp( fName, "Rank", true) == 0 ){ PlayerInfo[playerid][pRank] = cache_get_field_content_int(0, "Rank"); }
+	        if( strcmp( fName, "Model", true) == 0 ){ PlayerInfo[playerid][pModel] = cache_get_field_content_int(0, "Model"); }
+	        if( strcmp( fName, "Pos_X", true) == 0 ){ PlayerInfo[playerid][pPos_x] = cache_get_field_content_float(0, "Pos_X"); }
+	        if( strcmp( fName, "Pos_Y", true) == 0 ){ PlayerInfo[playerid][pPos_y] = cache_get_field_content_float(0, "Pos_Y"); }
+	        if( strcmp( fName, "Pos_Z", true) == 0 ){ PlayerInfo[playerid][pPos_z] = cache_get_field_content_float(0, "Pos_Z"); }
+	        if( strcmp( fName, "Wanted", true) == 0 ){ PlayerInfo[playerid][pWanted] = cache_get_field_content_int(0, "Wanted"); }
+	        if( strcmp( fName, "Band", true) == 0 ){ PlayerInfo[playerid][pBanda] = cache_get_field_content_int(0, "Band"); }
+	    }
+	    cache_delete( result, mysql );
+
+	    //Get weapon info
+	    new slot[64];
+		new ammo[64];
+		strQuery = "";
+	    strcat( strQuery, "SELECT * FROM `weapons` WHERE `uID`='%d'");
+		format(query, sizeof( query ), strQuery, PlayerInfo[playerid][pID]);
+		result = mysql_query( mysql, query );
+
+		
+
+		nrows = cache_get_row_count();
+		nFields = cache_get_field_count();
+	    for(new i=0 ; i<nFields ; i++){
+	        cache_get_field_name( i, fName, mysql, sizeof( fName ) );
+	        format(slot, sizeof( slot ), "Slot_%i", i - 1 );
+	        format(ammo, sizeof( ammo ), "Ammo_%i", i - 1 );
+	        if( strcmp( fName, slot, true) == 0 ){ PlayerInfo[playerid][pWeapon][i - 1] = cache_get_field_content_int(0, fName); }
+	        if( strcmp( fName, ammo, true) == 0 ){ PlayerInfo[playerid][pAmmo][i - 1] = cache_get_field_content_int(0, fName); }
+	    }
+	    cache_delete( result, mysql );
+	    
+	    //Get skill info
+	    new skill[64];
+	    strQuery = "";
+	    strcat( strQuery, "SELECT * FROM `skills` WHERE `uID`='%d'");
+		format(query, sizeof( query ), strQuery, PlayerInfo[playerid][pID]);
+		result = mysql_query( mysql, query );
+		
+		nrows = cache_get_row_count();
+		nFields = cache_get_field_count();
+		for(new i=0 ; i<nFields ; i++){
+	        cache_get_field_name( i, fName, mysql, sizeof( fName ) );
+	        format(skill, sizeof( skill ), "Skill_%i", i - 1 );
+	        if( strcmp( fName, skill, true) == 0 ){ PlayerInfo[playerid][pSkill][i - 1] = cache_get_field_content_int(0, fName); }
+	    }
+	    cache_delete( result, mysql );
+	    
+	    //get car keys info
+	    strQuery = "";
+	    strcat( strQuery, "SELECT * FROM `keys` WHERE `uID`='%d'");
+		format(query, sizeof( query ), strQuery, PlayerInfo[playerid][pID]);
+		result = mysql_query( mysql, query );
+
+		nrows = cache_get_row_count();
+		nFields = cache_get_field_count();
+		for(new i=0 ; i<nrows ; i++){
+		    for(new j=0 ; j<nFields ; j++){
+		        cache_get_field_name( j, fName, mysql, sizeof( fName ) );
+		        if( strcmp( fName, "Key", true) == 0 ){ PlayerInfo[playerid][pCarKeys][i] = cache_get_field_content_int(i, fName); }
+	        }
+	    }
+	    cache_delete( result, mysql );
+
+//=======================================================================================================================================
+
+        PlayerInfo[playerid][pLogged] = 1;
 		ResetPlayerMoney(playerid);
 		GivePlayerMoney(playerid,PlayerInfo[playerid][pCash]);
 		if(PlayerInfo[playerid][pReg] == 0)
@@ -3678,22 +3675,30 @@ public OnPlayerLogin(playerid,password[])
 			PlayerInfo[playerid][pReg] = 1;
 			GivePlayerMoney(playerid, 5000);
 		}
-		
+
         SetPlayerSkin(playerid,PlayerInfo[playerid][pModel]);
 		printf("%s has logged in",playername2);
-		
+
 		if (PlayerInfo[playerid][pAdmin] > 0)
 		{
 			format(string2, sizeof(string2), "SERVER: You are logged in as a Level %d Admin.",PlayerInfo[playerid][pAdmin]);
 			SendClientMessage(playerid, COLOR_WHITE,string2);
 		}
-		
+
 		gPlayerLogged[playerid] = 1;
 		TogglePlayerControllable(playerid,1);
-		
-		MostrarEscena(playerid, ESCENA_INTRO);
+	    MostrarEscena(playerid, ESCENA_INTRO);
+ 	}
+	else{
+	    SendClientMessage(playerid, COLOR_WHITE, "SERVER: Contraseña incorrecta.");
+        gPlayerLogTries[playerid] += 1;
+        if(gPlayerLogTries[playerid] == 4) { Ban(playerid); }
+		new aux[255];
+    	format(aux, sizeof(aux), "\n{7FFFD4}Nick: {1E90FF}%s Registered\n\n{FFFFFF} Contraseña\n", playername2);
+        ShowPlayerDialog(playerid, LOGIN, DIALOG_STYLE_PASSWORD, "Login", aux, "Login", "Cancelar");
+
+        return 1;
 	}
-	//StopAudioStreamForPlayer(playerid);
 	return 1;
 }
 // ------------------------------------ [ funciones bandas ] -------------------------------------
